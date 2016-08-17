@@ -10,7 +10,7 @@ app 为PFSocket实例
 ### app.all_socket_map
 `{Map}` 所有socket的map , 需要使用者在连接时将socket放入该map中,
 
-```javascript
+```js
 app
     .when('connect').then(function(socket,next){
         var app = this;
@@ -34,7 +34,7 @@ jobs:类似express的中间件,不同的事件可能有不同的参数,详见事
 handler为可选，其作用和job一样
 end只是为了标记一个事件处理的过程结束
 这是两种写法：
-```javascript
+```js
 app
     .when("attack").then(preAttack).then(attack).then(afterAttack).end()
     .when("spell").then(useSpell).end()
