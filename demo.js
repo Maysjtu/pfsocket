@@ -9,13 +9,13 @@ body很简单 {操作}-{数据} 比如say-hello world\n
 测试方式
 终端1：
 node --harmony demo.js
+终端2：
 telnet 127.0.0.1 8091
 hello-\n
 name-someone\n
 say-hello someone is speaking\n
 
-终端2:
-node --harmony demo.js
+终端3:
 telnet 127.0.0.1 8091
 hello-\n
 name-alia\n
