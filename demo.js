@@ -23,7 +23,7 @@ say-hi there\n
 
 */
 var app = new SocketServer();
-const uuid = require('./lib/utils').uuid;
+const uuid = require('node-uuid').v1;
 app.listen(8091,'127.0.0.1');
 var initID = function (socket,next){
     var app = this;
