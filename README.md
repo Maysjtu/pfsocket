@@ -39,7 +39,7 @@ app
     .when("attack").then(preAttack).then(attack).then(afterAttack).end()
     .when("spell").then(useSpell).end()
 ```
-```javascript
+```js
 app.when("attack").then(preAttack).then(attack).then(afterAttack);
 app.when("spell").then(useSpell)
 ```
@@ -59,14 +59,14 @@ app.recure("timer").then(function job(app,next){
 
 ### app.notify(id,msg)
 id:app.all_socket_map中socket对应的key
-```javascript
+```js
 app.notify(121,"hello you")
 ```
 
 ### app.broadcast(channel_name, msg)
 channel_name: app.channels对应channel的 key
 
-```javascript
+```js
 app.broadcast("all","hello everyone")
 ```
 
