@@ -1,0 +1,22 @@
+{
+  "name": "pfsocket",
+  "version": "1.0.0",
+  "description": "socket framework with no protocol",
+  "main": "lib/pfsock.js",
+  "scripts": {
+    "test": "node demo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turengege/pfsocket.git"
+  },
+  "keywords": [
+    "socket"
+  ],
+  "author": "liurui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turengege/pfsocket/issues"
+  },
+  "homepage": "https://github.com/turengege/pfsocket#readme"
+}
