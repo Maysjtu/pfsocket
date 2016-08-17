@@ -2,7 +2,27 @@ const SocketServer = require('./lib/pfsock.js');
 
 module.exports = SocketServer;
 
-var app = new SocketServer():
+/*
+一个简单的聊天室
+无协议
+body很简单 {操作}-{数据} 比如say-hello world\n
+测试方式
+终端1：
+node --harmony demo.js
+telnet 127.0.0.1 8091
+hello-\n
+name-someone\n
+say-hello someone is speaking\n
+
+终端2:
+node --harmony demo.js
+telnet 127.0.0.1 8091
+hello-\n
+name-alia\n
+say-hi there\n
+
+*/
+var app = new SocketServer();
 const uuid = require('./lib/utils').uuid;
 app.listen(8091,'127.0.0.1');
 var initID = function (socket,next){

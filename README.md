@@ -4,6 +4,8 @@
 
 ------
 
+基本使用方法查考demo.js
+
 ## app
 app 为PFSocket实例
 
@@ -56,7 +58,8 @@ app.recure("timer").then(function job(app,next){
 ```
 
 
-
+### app.send(socket,msg)
+向该socket 发送信息
 ### app.notify(id,msg)
 id:app.all_socket_map中socket对应的key
 ```js
@@ -69,6 +72,8 @@ channel_name: app.channels对应channel的 key
 ```js
 app.broadcast("all","hello everyone")
 ```
+
+### app.inChannels (socket, channel_name)
 
 
 -----------
@@ -100,6 +105,10 @@ socket收到来自客户端的信息,这个事件主要用来实现自定义协�
 
 ### 4.write
 用来实现自定义协议的打包部分
+app.send()
+app.broadcast()
+app.notify()
+都会出发该事件
 
 > (res, next) => void
 
