@@ -10,7 +10,7 @@ app 为PFSocket实例
 ### app.all_socket_map
 `{Map}` 所有socket的map , 需要使用者在连接时将socket放入该map中,
 
-```
+```javascript
 app
     .when('connect').then(function(socket,next){
         var app = this;
@@ -33,13 +33,13 @@ app
 jobs:类似express的中间件,不同的事件可能有不同的参数,详见事件部分
 handler为可选，其作用和job一样
 end只是为了标记一个事件处理的过程结束
-这是两张写法：
-```
+这是两种写法：
+```javascript
 app
     .when("attack").then(preAttack).then(attack).then(afterAttack).end()
     .when("spell").then(useSpell).end()
 ```
-```
+```javascript
 app.when("attack").then(preAttack).then(attack).then(afterAttack);
 app.when("spell").then(useSpell)
 ```
@@ -48,7 +48,7 @@ app.when("spell").then(useSpell)
 jobname:自定义的工作名
 jobs:工作
 inteval:间隔（毫秒）
-```
+```javascrpit
 app.recure("timer").then(function job(app,next){
     //do something every 10seconds
     next();
@@ -59,14 +59,14 @@ app.recure("timer").then(function job(app,next){
 
 ### app.notify(id,msg)
 id:app.all_socket_map中socket对应的key
-```
+```javascript
 app.notify(121,"hello you")
 ```
 
 ### app.broadcast(channel_name, msg)
 channel_name: app.channels对应channel的 key
 
-```
+```javascript
 app.broadcast("all","hello everyone")
 ```
 
